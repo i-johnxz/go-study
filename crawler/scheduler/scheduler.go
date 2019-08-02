@@ -3,6 +3,8 @@ package scheduler
 import "../model"
 
 type Scheduler interface {
+	ReadyNotifier
 	Submit(request model.Request)
-	ConfigureMasterWorkerChan(chan model.Request)
+	WorkerChann() chan model.Request
+	Run()
 }
