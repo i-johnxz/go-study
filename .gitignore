@@ -1,6 +1,4 @@
-crawler/.idea
-chat/.idea
-chat/frontend/.idea
+.idea/
 node_modules/
 build
 lerna-debug.log
