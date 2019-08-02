@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"net/http"
 
-	"./pkg/websocket"
+	"github.com/i-johnxz/go-study/chat/backend/pkg/websocket"
 )
 
-func serveWs(pool *websocket.Pool, w http.ResponseWriter, r *http.Request)  {
+func serveWs(pool *websocket.Pool, w http.ResponseWriter, r *http.Request) {
 	fmt.Println("WebSocket Endpoint Hit")
 	conn, err := websocket.Upgrade(w, r)
 	if err != nil {
@@ -23,7 +23,7 @@ func serveWs(pool *websocket.Pool, w http.ResponseWriter, r *http.Request)  {
 	client.Read()
 }
 
-func setupRoutes()  {
+func setupRoutes() {
 	pool := websocket.NewPool()
 	go pool.Start()
 
@@ -31,7 +31,6 @@ func setupRoutes()  {
 		serveWs(pool, w, r)
 	})
 }
-
 
 func main() {
 	fmt.Println("Distributed Chat App v0.01")
