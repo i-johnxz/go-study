@@ -1,4 +1,10 @@
 crawler/.idea
+chat/.idea
+chat/frontend/.idea
+node_modules/
+build
+lerna-debug.log
+npm-debug.log
 [Ll]og
 [Ll]ogs
 *.debug

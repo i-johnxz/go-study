@@ -1,3 +1,3 @@
 import ChatHistory from "./ChatHistory";
 
-export default ChatHistory
+export default ChatHistory;
